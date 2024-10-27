@@ -1,5 +1,3 @@
-# Define the README content
-readme_content = """
 # 🎉 Guess My Number! 🎉
 
 Welcome to **Guess My Number**, a fun, interactive number guessing game! Built entirely with JavaScript, this project highlights dynamic **DOM manipulation** to create an engaging user experience. Let's dive into the game and its cool features!
@@ -55,4 +53,3 @@ Some ideas to take it further:
 ---
 
 Give it a go, and may the odds be ever in your favor! ✨
-"""

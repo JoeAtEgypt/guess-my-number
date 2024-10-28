@@ -1,22 +1,47 @@
 "use strict";
 
-// console.log(document.querySelector(".message").textContent);
+// const number = Math.floor(Math.random() * 20) + 1;
+const secretNumber = ~~(Math.random() * 20) + 1;
+let score = 20;
+console.log(secretNumber);
 
-let message = document.querySelector(".message").textContent;
-
-const numberValue = 13;
-
-let score = document.querySelector(".score").textContent;
-score = 20;
-
+//  Event Handler
 const checkNumber = function () {
-  let guessInput = Number(document.querySelector(".guess").value);
+  const guess = Number(document.querySelector(".guess").value);
+  let message = "";
 
-  if (guessInput && score > 0) {
-    console.log(guessInput, score, numberValue);
-    if (guessInput === numberValue) {
-      document.querySelector(".message").textContent = "🎉 Correct Number!";
-      document.querySelector(".number").textContent = "13";
-    }
+  if (!guess) {
+    message = "⛔ No Number!";
+  } else if (guess === secretNumber) {
+    message = "🎉 Correct Number!";
+    document.querySelector(".number").textContent = secretNumber;
+    document.querySelector(".number").style.width = "30rem";
+    document.querySelector("body").style.backgroundColor = "#60b347";
+  } else if (guess > secretNumber && score--) {
+    message = "📈 Too High!";
+  } else if (guess < secretNumber && score--) {
+    message = "📉 Too Low!";
   }
+  if (score < 1) {
+    message = "💥 You lost the game!";
+    score = 0;
+  }
+  document.querySelector(".score").textContent = score;
+  document.querySelector(".message").textContent = message;
 };
+
+// addEventListener is the best way.
+// 'click' is an Event
+document.querySelector(".check").addEventListener("click", checkNumber);
+
+const reset = function () {
+  document.querySelector(".message").textContent = "Start guessing...";
+  document.querySelector(".guess").textContent = "";
+
+  document.querySelector(".number").textContent = "?";
+  document.querySelector(".number").style.width = "15rem";
+  document.querySelector("body").style.backgroundColor = "#222";
+
+  document.querySelector(".score").textContent = score;
+};
+document.querySelector(".again").addEventListener("click", reset);

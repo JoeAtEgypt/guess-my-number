@@ -1,6 +1,6 @@
 # 🎉 Guess My Number! 🎉
 
-Welcome to **Guess My Number**, a fun, interactive number guessing game! Built entirely with JavaScript, this project highlights dynamic **DOM manipulation** to create an engaging user experience. Let's dive into the game and its cool features!
+Welcome to **Guess My Number**[https://joeategypt.github.io/guess-my-number/], a fun, interactive number guessing game! Built entirely with JavaScript, this project highlights dynamic **DOM manipulation** to create an engaging user experience. Let's dive into the game and its cool features!
 
 ---
 

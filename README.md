@@ -46,8 +46,6 @@ This project taught me the essentials of **DOM Manipulation in JavaScript**, inc
 
 Some ideas to take it further:
 
-- Add **difficulty levels** for varied challenges.
-- Implement a **timer** to test speed as well as accuracy.
 - Add **sound effects** to make the gameplay even more exciting.
 
 ---
